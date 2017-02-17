@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db: 
+    image: redis:alpine
+    ports:
+     - 6379
+  web-api: 
+    image: pugstunt/mastermind-api:latest
+    links:
+      - db
+    ports:
+     - "8080:8080"
+    environment:
+      - environment=production
+      - redis.connection.string=redis://db:6379
