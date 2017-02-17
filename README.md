@@ -5,7 +5,7 @@
 ## Running
 
 ```
-curl https://goo.gl/lIQUxg -o docker-compose.yml && docker-compose up -d
+curl -L https://goo.gl/lIQUxg -o docker-compose.yml && docker-compose up -d
 
 ```
 
